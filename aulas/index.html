@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="imagens/apagada.jpg" id="light" 
+      onmousemove="changeLight(1)"
+      onmouseout="changeLight(2)"
+      onclick="changeLight(3)"
+    />
+    <script>
+      let isBreak = false
+      function changeLight(light) {
+        let arq
+        if(light == 1 && isBreak == false) {
+          arq = "imagens/acesa.jpg"
+        } else if(light == 2 && isBreak == false) {
+          arq = "imagens/apagada.jpg"
+        } else {
+          arq = "imagens/quebrada.jpg"
+          isBreak = true
+        }
+        document.getElementById('light').src = arq
+      }
+    </script>
+  </body>
+</html>
