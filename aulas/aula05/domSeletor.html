@@ -1,0 +1,68 @@
+<style>
+  body {
+    font: normal 12pt Arial;
+  }
+</style>
+
+<h2>Seletores</h2>
+<div id="exemplo">Exemplo <strong>ID</strong></div>
+<div class="classe">Exemplo <strong>Class</strong></div>
+<div name="nome">Exemplo <strong>Name</strong></div>
+<p>
+  <a href="https://tableless.com.br/entendendo-o-dom-document-object-model/">
+    Tableless - DOM</a
+  >
+</p>
+<hr />
+
+<script>
+  // window.document.write("Exemplo DOM")
+  // document.write('<p>Boa Noite</p>')
+  // document.write(window.document.URL)
+
+  //***Seleção de elementos por ID, Classe, Nome da Tag, Name ou querySelector (como css)
+  var divID = document.getElementById('exemplo')
+  document.write(divID.innerHTML)
+
+  var divClass = document.getElementsByClassName('classe')[0]
+  document.write(divClass.innerText)
+
+  var texto = document.getElementsByTagName('h2')[0]
+  texto.innerHTML = 'Tipos de Seletores'
+  texto.style.color = 'red'
+
+  var nome = document.getElementsByName('nome')[0]
+  console.log(nome)
+
+  // Selecionar utilizando sintaxe CSS, mais recomendado
+  var seletor = document.querySelector('div#exemplo')
+  seletor.style.background = 'pink'
+
+  var seletorAll = document.querySelectorAll('a')[0]
+  console.log(seletorAll.getAttribute('href'))
+  console.log(seletorAll.href)
+
+  seletorAll.setAttribute('href', 'http://www.ifsp.edu.br/')
+  // ou
+  seletorAll.href = 'http://www.ifsp.edu.br/'
+
+  //Elementos pais e filhos
+  var divID = document.getElementById('exemplo')
+  console.log(divID.parentElement)
+  console.log(divID.parentNode) //ou
+
+  console.log(divID.childNodes) // Textos e elementos html
+  console.log(divID.children) // elementos html
+
+  divID.remove() //remove elementos html
+
+  //adicionar elementos - comentar os anteriores
+  let link = document.createElement('a')
+  link.href = 'http://www.ifsp.edu.br/'
+  link.innerHTML = 'IFSP'
+  document.body.append(link)
+
+  let hr = document.createElement('hr')
+  let divID = document.getElementById('exemplo')
+  document.body.insertBefore(hr, divID)
+</script>
