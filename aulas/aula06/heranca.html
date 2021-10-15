@@ -1,0 +1,50 @@
+<script>
+    const meuArr = [1, 2, 3]
+    // meuArr.__proto__ => Array.prototype => Object.prototype => null
+
+    const funcao = function () {
+        2 + 2
+    }
+    // funcao.__proto__ => Function.prototype => Object.prototype => null
+
+    const meuObj = { a: 1, b: 2}
+    // meuObj.__proto__ => Object.prototype => null
+
+    const newObj = Object.create(meuObj)
+    newObj.b = 5
+    console.log(newObj.b + meuObj.b)
+
+    class Pessoa {
+        constructor(nome, idade) {
+            this.nome = nome
+            this.idade = idade
+        }
+
+        incrementAge() {
+            this.idade++
+        }
+    }
+
+    class Aluno extends Pessoa() {
+        constructor(nome, idade, matricula) {
+            super(nome, idade)
+            this.matricula = matricula
+        }
+    }
+
+    const prof = new Pessoa('Johnata', 35)
+    prof.incrementAge()
+    console.log(prof)
+
+    const aluno = new Aluno('Vinícius', 20)
+
+    class Disciplina {
+        constructor(nome, professor) {
+            this.nome = nome
+            this.professor = professor
+        }
+    }
+
+    const disciplina = new Disciplina('DW2A4', prof)
+    console.log(disciplina) 
+</script>
