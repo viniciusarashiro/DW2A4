@@ -1,39 +1,44 @@
 export const Mask = {
     cpf(value) {
         return value.replace(/\D/g, '')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d{1,2})/, '$1-$2')
-        .replace(/(-\d{2})\d+?$/, '$1')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(-\d{2})\d+?$/, '$1')
     },
 
     nome(value) {
-        return value
+        while (!isNaN(value)) {
+            return ""
+        }
+        if (isNaN(value)) {
+            return value
+        }
     },
-    
+
     email(value) {
         return value
     },
 
     cep(value) {
         return value.replace(/\D/g, '')
-        .replace(/(\d{5})(\d)/, '$1-$2')
-        .replace(/(-\d{3})\d+?$/, '$1')
+            .replace(/(\d{5})(\d)/, '$1-$2')
+            .replace(/(-\d{3})\d+?$/, '$1')
     },
 
     fone(value) {
         return value.replace(/\D/g, '')
-        .replace(/(\d{2})(\d)/, '($1) $2')
-        .replace(/(\d{4})(\d)/, '$1-$2')
-        .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
-        .replace(/(-\d{4})\d+?$/, '$1')
+            .replace(/(\d{2})(\d)/, '($1) $2')
+            .replace(/(\d{4})(\d)/, '$1-$2')
+            .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+            .replace(/(-\d{4})\d+?$/, '$1')
     },
 
     date(value) {
         return value.replace(/\D/g, '')
-        .replace(/(\d{2})(\d)/, '$1-$2')
-        .replace(/(\d{2})(\d)/, '$1-$2')
-        .replace(/(-\d{4})\d+?$/, '$1')
+            .replace(/(\d{2})(\d)/, '$1-$2')
+            .replace(/(\d{2})(\d)/, '$1-$2')
+            .replace(/(-\d{4})\d+?$/, '$1')
     }
 }
 
