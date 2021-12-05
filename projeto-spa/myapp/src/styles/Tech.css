@@ -3,7 +3,7 @@
     margin-top: 1em 0;
     display: block;
     justify-content: space-around;
-    padding-bottom: 7em;
+    padding-bottom: 6em;
 }
 
 h2 {
@@ -11,9 +11,27 @@ h2 {
     padding: 0.5em;
 }
 
+hr {
+    margin-bottom: 5em;
+    margin-top: 2em;
+}
+
 p {
-    text-align: center;
+    text-align: justify;
     padding: 0.5em;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+li {
+    text-align: justify;
+   
+    margin-left: 6em;
+}
+
+.tag {
+    color: green;
+     text-decoration: solid;
 }
 
 
@@ -34,4 +52,15 @@ p {
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 1.5em;
+}
+
+@media screen and (max-width:568px) {
+    p {
+        font-size: 0.9em;
+       margin-right: 2em;
+        margin-left: 2em;
+    }
+    .techMain {
+        padding-bottom: 4em;
+    }
 }

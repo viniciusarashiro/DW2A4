@@ -17,7 +17,7 @@ const Css = () => {
                 </div>
                 <section>
                     <h2>O que é Css?</h2>
-                    <p>CSS significa Cascading Style Sheets. É uma linguagem utilizada para definir estilos. Tem como função descrever como os elementos HTML deverão ser exibidos na tela.</p>
+                    <p>CSS significa Cascading Style Sheets. É uma linguagem utilizada para definir estilos. </p><p>Tem como função descrever como os elementos HTML deverão ser exibidos na tela.</p>
                 </section>
                 <hr />
                 <section>

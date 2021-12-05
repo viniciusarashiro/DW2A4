@@ -12,7 +12,7 @@ const Html = () => {
                         <NavLink to="/" className="readMore">Anterior</NavLink>
                     </div>
                     <div className="btn">
-                        <NavLink to="/" className="readMore">Próximo</NavLink>
+                        <NavLink to="/list" className="readMore">Próximo</NavLink>
                     </div>
                 </div>
 
@@ -26,11 +26,11 @@ const Html = () => {
                     <h2>Tags HTML</h2>
                     <p>HTML funciona baseada em marcações específicas chamadas tags. Uma tag  serve para demarcar os elementos da página (textos, multimídia, containers). Uma tag é um conjunto de palavras entre sinais de colchete angular.</p>
                     <code>
-                        <p> &lt;p&gt;Exemplo de parágrafo&lt;/&gt;</p>
+                        <p> &lt;<span className="tag">p</span>&gt;Exemplo de parágrafo&lt;/&gt;</p>
                     </code>
                     <p>As tag também podem ter atributos e valores, que vão fornecer informações adicionais para configuração de uma tag e são declarados sempre na tag de abertura.</p>
                     <code>
-                        <p>	&lt;a href="index.html"&gt;Exemplo de link&lt;/&gt;</p>
+                        <p>	&lt;<span className="tag">a href="index.html"</span>&gt;Exemplo de link&lt;/&gt;</p>
                     </code>
                 </section>
                 <hr />
@@ -48,15 +48,15 @@ const Html = () => {
                                  </body>
                             </html>
                         `
-                    }
-                        <ul>
-                            <li>&lt;!DOCTYPE html&gt; define o tipo de documento e a versão</li>
-                            <li>&lt;html&gt; elemento raiz de uma página html</li>
-                            <li>&lt;head&gt; elemento que contém metadados da página</li>
-                            <li>&lt;title&gt; configura o título da página que é mostrado na aba do navegador</li>
-                            <li>&lt;body&gt;seção onde é colocado todo o conteúdo da página para aparecer na tela.</li>
-                        </ul>
-                    </pre>
+                    }</pre>
+                    <ul>
+                        <li>&lt;<span className="tag">!DOCTYPE html</span>&gt; define o tipo de documento e a versão</li>
+                        <li>&lt;<span className="tag">html</span>&gt; elemento raiz de uma página html</li>
+                        <li>&lt;<span className="tag">head</span>&gt; elemento que contém metadados da página</li>
+                        <li>&lt;<span className="tag">title</span>&gt; configura o título da página que é mostrado na aba do navegador</li>
+                        <li>&lt;<span className="tag">body</span>&gt;seção onde é colocado todo o conteúdo da página para aparecer na tela.</li>
+                    </ul>
+
                 </section>
             </div>
         </>

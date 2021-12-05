@@ -5,6 +5,7 @@ import Html from './components/Html'
 import Css from './components/Css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import HtmlList from './components/HtmlList'
 import { Switch, Route } from 'react-router-dom'
 
 
@@ -15,6 +16,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/html" component={Html} />
+        <Route path="/list" component={HtmlList} />
         <Route path="/css" component={Css} />
       </Switch>
       <Footer />
