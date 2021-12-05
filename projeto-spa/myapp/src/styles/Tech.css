@@ -1,0 +1,37 @@
+.techMain {
+    width: 100%;
+    margin-top: 1em 0;
+    display: block;
+    justify-content: space-around;
+    padding-bottom: 7em;
+}
+
+h2 {
+    margin-left: 3em;
+    padding: 0.5em;
+}
+
+p {
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+.btnBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    align-items: center;
+}
+
+.btn {
+    border: 2px solid black;
+    border-radius: 2em;
+    background-image: linear-gradient(#fff, #fff),
+    radial-gradient(circle at bottom right, purple, orange);
+    padding: 0.5em;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 1.5em;
+}
